@@ -1,0 +1,286 @@
+.white {
+  --background-color: #fff;
+  --font-color: #fff;
+  --div-background: #31a9de;
+  --tags-color: #005494;
+}
+.blue {
+  --background-color: #005494;
+  --font-color: #0c0c0c;
+  --div-background: #fff;
+  --tags-color: #97999a;
+}
+.lightBlue {
+  --background-color: #31a9de;
+  --font-color: #0c0c0c;
+  --div-background: #fff;
+  --tags-color: #31a9de;
+}
+.black {
+  --background-color: #0c0c0c;
+  --font-color: #fff;
+  --div-background: #005494;
+  --tags-color: #31a9de;
+}
+#root {
+  background-color: var(--background-color);
+  margin: 0 -8px 0;
+}
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: -8px;
+  overflow: visible;
+}
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -8px 0;
+  height: 50vh;
+  width: 88vw;
+  max-width: 1280px;
+  border-radius: 0 0 20px 20px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 45px;
+  padding: 0 10px;
+  text-shadow: 0 0 8px  #fff;
+}
+.header p {
+  margin: 0;
+  font-family: 'john hancockcp';
+  font-size: 22px;
+  padding: 0 10px;
+  text-shadow: 0 0 8px  #fff;
+}
+.searchInput {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--div-background);
+}
+.search,
+.sunrise,
+.sunset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--font-color);
+  padding: 0 20px;
+}
+.sunset {
+  padding-right: 30px;
+  border-right: none;
+}
+.sunrise input,
+.sunset input {
+  border: 0;
+  background-color: var(--div-background);
+}
+.search input {
+  border: 0;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: var(--div-background);
+}
+.sunset button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  right: 10px;
+  padding: 11px 7px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(56, 56, 56);
+}
+.sunset button img {
+  height: 15px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px 20px;
+}
+.subInfo {
+  display: flex;
+  background-color: var(--div-background);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 30px 15px 0 15px;
+  border-radius: 15px;
+  width: 40%;
+  min-width: 300px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.subInfo img {
+  height: 70px;
+  align-self: center;
+}
+.todayDiv {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  padding: 0 10px;
+}
+@media (max-width: 480px) {
+  .todayDiv {
+    font-size: 16px;
+  }
+  .sunrise {
+    display: none;
+  }
+}
+.commonLocation {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "one two three four five six"
+    "one two three four five six"
+    "one two three four five six";
+  grid-template-columns: repeat(6, minmax(220px, 1fr));
+  grid-template-rows: repeat(3, 100px);
+  gap: 20px;
+  padding: 85px 0 40px;
+}
+.commonLocation h2 {
+  position: absolute;
+  padding-top: 20px;
+  color: var(--font-color);
+  z-index: -1;
+}
+.commonLocation div {
+  position: relative;
+  border-radius: 10px;
+}
+.commonLocation p {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 66px;
+  text-align: center;
+  background-color: var(--div-background);
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+.one {
+  grid-area: one;
+  background: url(./images/new-york.avif) center / cover no-repeat;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.one:hover {
+  transform: scale(1.05);
+}
+.two {
+  grid-area: two;
+  background: url(./images/tokyo.jpg) center / cover no-repeat;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.two:hover {
+  transform: scale(1.05);
+}
+.three {
+  grid-area: three;
+  background: url(./images/berlin.webp) center / cover no-repeat;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.three:hover {
+  transform: scale(1.05);
+}
+.four {
+  grid-area: four;
+  background: url(./images/sydney.jpg) center / cover no-repeat;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.four:hover {
+  transform: scale(1.05);
+}
+.five {
+  grid-area: five;
+  background: url(./images/paris.jpg) center / cover no-repeat;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.five:hover {
+  transform: scale(1.05);
+}
+.six {
+  grid-area: six;
+  background: url(./images/amman.jpg) center / cover no-repeat;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.six:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 1540px) {
+  .commonLocation {
+    grid-template-areas:
+      "one two four five"
+      "one two four six"
+      "one three four six";
+    grid-template-columns: repeat(4, minmax(260px, 1fr));
+    grid-template-rows: repeat(3, 110px);
+  }
+}
+@media (max-width: 1200px) {
+  .commonLocation {
+    grid-template-areas:
+      "one two"
+      "one three"
+      "one three"
+      "four six"
+      "four six"
+      "five six";
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+    grid-template-rows: repeat(6, 110px);
+  }
+}
+@media (max-width: 799px) {
+  .commonLocation {
+    grid-template-areas:
+      "one"
+      "one"
+      "two"
+      "three"
+      "three"
+      "four"
+      "five"
+      "five"
+      "six";
+    grid-template-columns: minmax(350px, 1fr);
+    grid-template-rows: repeat(9, 110px);
+  }
+}
+@media (max-width: 360px) {
+  .commonLocation {
+    grid-template-columns: minmax(300px, 1fr);
+  }
+}
