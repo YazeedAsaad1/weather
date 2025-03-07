@@ -26,7 +26,7 @@ Check out the live demo: https://yazeedasaad.com/projects/1
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/weather-location-app.git
+   git clone https://github.com/yazeedasaad1/weather.git
    cd weather-location-app
    ```
 
